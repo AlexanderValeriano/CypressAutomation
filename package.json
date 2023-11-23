@@ -1,0 +1,22 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "formationRahulShetty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderValeriano/CypressAutomation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexanderValeriano/CypressAutomation/issues"
+  },
+  "homepage": "https://github.com/AlexanderValeriano/CypressAutomation#readme",
+  "devDependencies": {
+    "cypress": "^13.6.0"
+  }
+}
