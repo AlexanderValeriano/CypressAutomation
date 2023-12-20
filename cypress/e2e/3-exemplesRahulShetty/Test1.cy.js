@@ -15,7 +15,7 @@ describe("My First Test Suite", () => {
     // Risk of break Path if we use xpath of an ellement in the DOM
     cy.get(":nth-child(4) > .product-action > button");
     cy.get(".products").find(".product").eq(1).contains("ADD TO CART").click();
-    //
+
     cy.get(".products")
       .find(".product")
       .each(($el, index, $list) => {
@@ -23,8 +23,14 @@ describe("My First Test Suite", () => {
         //includes is a method in Javascript
         if (textVeg.includes("Cashews")) {
           // $el.contains("ADD TO CART").trigger("click");
-          $el.find("button").trigger("click");
+          $el.find("button").trigger("cli ck");
         }
       });
+    cy.get(".brand").then((logoElement) => {
+      cy.log(logoElement.text());
+    });
+    const logo = cy.get(".brand");
+    // cy.get(".brand").text();
+    // cy.log(log.text());
   });
 });
