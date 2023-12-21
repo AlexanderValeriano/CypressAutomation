@@ -17,7 +17,16 @@ describe("My Third Test Suite", () => {
       .select("option2")
       .should("have.value", "option2");
 
-    cy.wait(3000);
+    // cy.wait(3000);
     cy.get("#dropdown-class-example").select("").should("have.value", "");
+
+    // Dynamic dropdowns
+    cy.get("#autocomplete").type("ind");
+    cy.get(".ui-menu-item div").each(($el, i, $list) => {
+      if ($el.text() === "India") {
+        $el.trigger("click");
+      }
+    });
+    cy.get("#autocomplete").should("have.value", "India");
   });
 });
