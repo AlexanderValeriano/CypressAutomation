@@ -17,5 +17,7 @@ describe("My Fourth Test Suite", () => {
       //Mocha
       expect(str).to.equal("Hello , Are you sure you want to confirm?");
     });
+    // Using removeAttr-Jquery fonction for not flaky test and remove attribute target.
+    cy.get("#opentab").invoke("removeAttr", "target").click();
   });
 });
