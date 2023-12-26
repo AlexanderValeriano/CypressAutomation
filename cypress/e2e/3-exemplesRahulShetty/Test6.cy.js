@@ -5,8 +5,9 @@ describe("My Sixth Test Suite", () => {
     // test step
     cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
     // Verifing the popup is displaying and i can select TOP for validate scenario POPUP opened
-    cy.get("div.mouse-hover-content").invoke("show");
-    cy.contains("Top").click();
+    // cy.get("div.mouse-hover-content").invoke("show");
+
+    cy.contains("Top").click({ force: true });
     cy.url().should("include", "top");
   });
 });
