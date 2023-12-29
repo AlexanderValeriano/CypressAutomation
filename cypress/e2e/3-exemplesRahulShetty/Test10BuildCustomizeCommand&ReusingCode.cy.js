@@ -24,7 +24,8 @@ describe("Validate attribute properties with Hook DDT Test Suite", () => {
     );
 
     cy.get("#inlineRadio3").should("be.disabled");
-    cy.get(":nth-child(2) > .nav-link").click();
+    cy.pause();
+    cy.get(":nth-child(2) > .nav-link").click().debug();
     userdata.productName.forEach((element) => {
       cy.selectProduct(element);
     });
