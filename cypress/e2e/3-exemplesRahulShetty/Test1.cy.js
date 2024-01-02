@@ -29,7 +29,7 @@ describe("My First Test Suite", () => {
         //includes is a method in Javascript
         if (textVeg.includes("Cashews")) {
           // $el.contains("ADD TO CART").trigger("click");
-          $el.find("button").trigger("cli ck");
+          $el.find("button").trigger("click");
         }
       });
     // Assert if logo test is correctly displayed
