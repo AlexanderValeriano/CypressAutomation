@@ -37,6 +37,24 @@ describe("Validate attribute properties with Hook DDT Test Suite", () => {
     });
 
     productPage.CheckOutButton().click();
+    //**   declare variables for assertion **//
+    let sum = 0;
+    // *** Assertion **//
+    cy.get("tr td:nth-child(4) strong")
+      .each(($el, i, $list) => {
+        //** First : Extract text ***/
+        // cy.log($el.text());
+        //** Second : Recupere only value from text and use trim for remove espaces ***/
+        const actualText = $el.text();
+        let res = actualText.split(" ");
+        res = res[1].trim();
+        sum = Number(sum) + Number(res);
+        cy.log(sum);
+      })
+      .then(() => {
+        cy.log(sum);
+      });
+
     cy.contains("Checkout").click();
     cy.get("#country").type("India");
     cy.get(".suggestions > ul > li > a").click();
