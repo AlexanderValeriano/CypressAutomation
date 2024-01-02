@@ -13,3 +13,6 @@ describe("My Sixth Test Suite", () => {
     });
   });
 });
+// *** command line
+
+// node_modules/.bin/cypress run --spec cypress/e2e/3-exemplesRahulShetty/Test7.cy.js --env url=https://www.google.com --headed
