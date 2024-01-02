@@ -3,7 +3,9 @@
 describe("My Fifth Test Suite", () => {
   it("My fifthTest case", () => {
     // test step
-    cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
+    // cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
+    cy.visit(Cypress.env("url") + "/AutomationPractice/");
+
     cy.get(".table-display tr td:nth-child(2)").each(($el, i, $list) => {
       let textCourse = $el.text();
       if (textCourse.includes("Python")) {
