@@ -13,3 +13,6 @@ describe("My Sixth Test Suite", () => {
     cy.url().should("include", "top");
   });
 });
+
+//** Run this command for dashboard **// 
+// npx cypress run --record --key 9fb8747c-966d-4548-86ef-24e140a1ebef

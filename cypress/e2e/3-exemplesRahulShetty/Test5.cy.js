@@ -14,7 +14,8 @@ describe("My Fifth Test Suite", () => {
           .next()
           .then((price) => {
             const priceText = price.text();
-            expect(priceText).to.equal("25");
+            //** Change 25 for 26 for the example Dashboard */
+            expect(priceText).to.equal("26");
           });
       }
     });
