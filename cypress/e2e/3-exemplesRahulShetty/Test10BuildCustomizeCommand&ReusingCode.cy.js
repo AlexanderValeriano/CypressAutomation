@@ -49,12 +49,20 @@ describe("Validate attribute properties with Hook DDT Test Suite", () => {
         let res = actualText.split(" ");
         res = res[1].trim();
         sum = Number(sum) + Number(res);
-        cy.log(sum);
       })
       .then(() => {
         cy.log(sum);
       });
 
+    //** Thirth compare with the total */
+    cy.get("h3 strong").then((el) => {
+      const amountTotal = el.text();
+      let res = amountTotal.split(" ");
+      let total = res[1].trim();
+      total = Number(total);
+      // cy.log(total);
+      expect(total).to.equal(sum);
+    });
     cy.contains("Checkout").click();
     cy.get("#country").type("India");
     cy.get(".suggestions > ul > li > a").click();
