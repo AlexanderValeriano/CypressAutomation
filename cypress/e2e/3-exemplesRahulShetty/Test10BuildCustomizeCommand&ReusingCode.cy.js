@@ -15,6 +15,9 @@ describe("Validate attribute properties with Hook DDT Test Suite", () => {
   });
   // ******* Tests ************//
   it("ValidatingAttributePropertiesAndBehavior", () => {
+    //***** Ideally until 10 seconds - If tou need to apply a config time to a specific test ***//
+    // Cypress.config("pageLoadTimeout", 8000);
+
     const homePage = new HomePage();
     const productPage = new ProductPage();
     cy.visit("https://rahulshettyacademy.com/angularpractice/");
@@ -23,6 +26,10 @@ describe("Validate attribute properties with Hook DDT Test Suite", () => {
     homePage.getGender().select(userdata.gender);
     homePage.getEditBox().should("have.attr", "minlength", "2");
     homePage.getEntrepreneaur().should("be.disabled");
+
+    // ****** If i apply before getShopBUtton this config apply only here   ****//
+    // Cypress.config("pageLoadTimeout", 8000);
+
     homePage.getShopTab().click();
 
     userdata.productName.forEach((element) => {
@@ -30,5 +37,8 @@ describe("Validate attribute properties with Hook DDT Test Suite", () => {
     });
 
     productPage.CheckOutButton().click();
+    cy.contains("Checkout").click();
+    cy.get("#country").type("India");
+    cy.get(".suggestions > ul > li > a").click();
   });
 });
