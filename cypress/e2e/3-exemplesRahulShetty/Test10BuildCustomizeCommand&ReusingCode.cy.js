@@ -20,7 +20,7 @@ describe("Validate attribute properties with Hook DDT Test Suite", () => {
 
     const homePage = new HomePage();
     const productPage = new ProductPage();
-    cy.visit("https://rahulshettyacademy.com/angularpractice/");
+    cy.visit(Cypress.env("url"));
     homePage.getEditBox().type(userdata.name);
     homePage.getTwoWaysBinding().should("have.value", userdata.name);
     homePage.getGender().select(userdata.gender);

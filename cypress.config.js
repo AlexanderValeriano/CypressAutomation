@@ -8,4 +8,7 @@ module.exports = defineConfig({
   },
   experimentalWebKitSupport: true,
   defaultCommandTimeout: 8000,
+  env: {
+    url: "https://rahulshettyacademy.com/angularpractice/",
+  },
 });
