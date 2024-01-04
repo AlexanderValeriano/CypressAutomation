@@ -10,7 +10,7 @@
     "chromeTest": "npm run test -- --browser chrome",
     "firefoxTest": "npm run test -- --browser firefox",
     "recordDashBoardTest": "npm run test -- --record --key 9fb8747c-966d-4548-86ef-24e140a1ebef --reporter mochawesome",
-    "greenKartTest": "npm run test -- --spec \"/cypress/e2e/GreenKart/*\""
+    "greenKartTest": "npm run test -- --spec \"cypress/e2e/GreenKart/*\""
   },
   "repository": {
     "type": "git",
