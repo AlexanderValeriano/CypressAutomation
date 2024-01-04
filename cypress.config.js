@@ -13,4 +13,13 @@ module.exports = defineConfig({
     url: "https://rahulshettyacademy.com",
   },
   reporter: "mochawesome",
+
+  // retries: {
+  //   // Configure retry attempts for `cypress run`
+  //   // Default is 0
+  //   runMode: 1,
+  //   // Configure retry attempts for `cypress open`
+  //   // Default is 0
+  //   openMode: 0,
+  // },
 });

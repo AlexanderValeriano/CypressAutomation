@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2024-01-04T12:05:25.315Z",
-    "end": "2024-01-04T12:05:35.530Z",
-    "duration": 10215,
+    "failures": 1,
+    "start": "2024-01-04T12:16:31.584Z",
+    "end": "2024-01-04T12:16:47.042Z",
+    "duration": 15458,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "2059fd02-3fe2-4cbc-a957-09fd14bc96a1",
+      "uuid": "98950009-18f4-480b-a5c8-60b60697d512",
       "title": "",
       "fullFile": "cypress/e2e/GreenKart/Test2.cy.js",
       "file": "cypress/e2e/GreenKart/Test2.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "675984d0-3fd9-4a66-a9d7-765e35e597e7",
+          "uuid": "e09536ef-f220-40f7-9ba9-95a671d6c12b",
           "title": "My Second Test Suite",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,33 @@
               "title": "My secondTest case",
               "fullTitle": "My Second Test Suite My secondTest case",
               "timedOut": null,
-              "duration": 8602,
-              "state": "passed",
-              "speed": "medium",
-              "pass": true,
-              "fail": false,
+              "duration": 13101,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "// test step\ncy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\");\ncy.get(\".search-keyword\").type(\"ca\");\ncy.wait(2000);\n//Parent child\ncy.get(\".products\").as(\"productLocator\");\ncy.get(\"@productLocator\").find(\".product\").should(\"have.length\", 4);\ncy.get(\"@productLocator\").find(\".product\").each(($el, index, $list) => {\n  const textVeg = $el.find(\"h4.product-name\").text();\n  //includes is a method in Javascript\n  if (textVeg.includes(\"Cashews\")) {\n    // $el.contains(\"ADD TO CART\").trigger(\"click\");\n    $el.find(\"button\").trigger(\"click\");\n  }\n});\ncy.get(\".cart-icon>img\").click();\ncy.contains(\"PROCEED TO CHECKOUT\").click();\ncy.contains(\"Place Order\").click();",
-              "err": {},
-              "uuid": "9330f0b2-5572-43a4-95a3-3f6b3fa2a420",
-              "parentUUID": "675984d0-3fd9-4a66-a9d7-765e35e597e7",
+              "code": "// test step\n// cy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\");\ncy.visit(\"https://rahulshettyacademy.com\");\ncy.get(\".search-keyword\").type(\"ca\");\ncy.wait(2000);\n//Parent child\ncy.get(\".products\").as(\"productLocator\");\ncy.get(\"@productLocator\").find(\".product\").should(\"have.length\", 4);\ncy.get(\"@productLocator\").find(\".product\").each(($el, index, $list) => {\n  const textVeg = $el.find(\"h4.product-name\").text();\n  //includes is a method in Javascript\n  if (textVeg.includes(\"Cashews\")) {\n    // $el.contains(\"ADD TO CART\").trigger(\"click\");\n    $el.find(\"button\").trigger(\"click\");\n  }\n});\ncy.get(\".cart-icon>img\").click();\ncy.contains(\"PROCEED TO CHECKOUT\").click();\ncy.contains(\"Place Order\").click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `.search-keyword`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `.search-keyword`, but never found it.\n    at Context.eval (webpack://cypressautomation/./cypress/e2e/GreenKart/Test2.cy.js:9:7)",
+                "diff": null
+              },
+              "uuid": "1b6dd6bd-93a2-46d5-ba10-6610bd43d3b6",
+              "parentUUID": "e09536ef-f220-40f7-9ba9-95a671d6c12b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "9330f0b2-5572-43a4-95a3-3f6b3fa2a420"
+          "passes": [],
+          "failures": [
+            "1b6dd6bd-93a2-46d5-ba10-6610bd43d3b6"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8602,
+          "duration": 13101,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

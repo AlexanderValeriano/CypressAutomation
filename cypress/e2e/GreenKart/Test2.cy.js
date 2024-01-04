@@ -3,7 +3,9 @@
 describe("My Second Test Suite", () => {
   it("My secondTest case", () => {
     // test step
-    cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
+    // cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
+    cy.visit("https://rahulshettyacademy.com");
+
     cy.get(".search-keyword").type("ca");
     cy.wait(2000);
     //Parent child
