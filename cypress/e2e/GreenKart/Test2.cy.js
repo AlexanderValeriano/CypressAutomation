@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-
+//**  npm run greenKartTest  **/
 describe("My Second Test Suite", () => {
   it("My secondTest case", () => {
     // test step
