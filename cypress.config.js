@@ -14,6 +14,8 @@ module.exports = defineConfig({
   },
   reporter: "mochawesome",
 
+  testFiles: "**/*.feature",
+
   // retries: {
   //   // Configure retry attempts for `cypress run`
   //   // Default is 0
