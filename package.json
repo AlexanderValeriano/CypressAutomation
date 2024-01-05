@@ -16,7 +16,10 @@
     "type": "git",
     "url": "git+https://github.com/AlexanderValeriano/CypressAutomation.git"
   },
-  "author": "",
+  "author": "alexanderValeriano",
+  "cypress-cucumber-preprocessor":{
+    "nonGlobalStepDefinitions":true
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AlexanderValeriano/CypressAutomation/issues"
